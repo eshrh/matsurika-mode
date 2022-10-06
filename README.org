@@ -1,0 +1,16 @@
+This repository contains tools to make working with [[https://github.com/eshrh/matsurika][matsurika]] easier
+in emacs. Matsurika is a fork of janet with some function renamings,
+macros and extra utilities to make my life easier while scripting.
+
+There is a matsurika program to generate elisp readable docs which can
+then be used by matsurika-mode.el to provide autocompletion via
+company and docs look-up of functions (C-c C-d). Matsurika-mode is
+derived from [[https://github.com/clojure-emacs/clojure-mode/][clojure-mode]] to do a lot of heavy lifting primarily with
+indentation. I have always clojure-mode on my emacs anyway, so I don't
+care about the dependency. Most of the program is based on [[https://github.com/ALSchwalm/janet-mode][janet-mode]]
+by ALSchwalm (GPL). Similarly, this modified version is also licensed
+under the GPL.
+
+Originally, these files were contained in the main
+repository. However, this makes it difficult to use the mode with
+something like straight.el to sync the elisp code across computers.
