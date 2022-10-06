@@ -14,3 +14,13 @@ under the GPL.
 Originally, these files were contained in the main
 repository. However, this makes it difficult to use the mode with
 something like straight.el to sync the elisp code across computers.
+
+Using straight, this is now very easy:
+
+#+BEGIN_SRC emacs-lisp
+(sup '(matsurika-mode
+       :type git
+       :host github
+       :repo "eshrh/matsurika-mode"
+       :files ("*.el" "docs.txt")))
+#+END_SRC
