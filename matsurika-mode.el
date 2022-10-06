@@ -185,7 +185,10 @@ the syntax table, so `forward-word' works as expected.")
 
 (defun matsurika--generate-builtin-ht ()
   (interactive)
-  (load-file "./docs.txt")
+  (setq mts-docs-file (if load-file-name
+                          (concat (file-name-directory load-file-name) "/docs.txt")
+                        "./docs.txt"))
+  (load-file mts-docs-file)
   (setq mts-ht (make-hash-table :test #'equal))
   (cl-loop for doc in mts-docs
            do (puthash (car doc) (cdr doc) mts-ht)))
